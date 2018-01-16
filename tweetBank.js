@@ -12,8 +12,6 @@ function add (name, content) {
   function find (properties) {
     return _.cloneDeep(_.filter(data, properties));
   }
-  
-  module.exports = { add: add, list: list, find: find };
 
   const randArrayEl = function(arr) {
     return arr[Math.floor(Math.random() * arr.length)];
@@ -31,7 +29,11 @@ function add (name, content) {
   };
   
   for (let i = 0; i < 10; i++) {
-    module.exports.add( getFakeName(), getFakeTweet() );
+    add( getFakeName(), getFakeTweet() );
   }
 
-  console.log(data);
+
+  module.exports = { add: add, list: list, find: find };
+
+  // console.log('Start');
+  // console.log(_.filter(data,index=>/S(?=h|c|t)/g.test(index.name)));
