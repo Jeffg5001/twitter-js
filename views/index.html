@@ -15,11 +15,14 @@
     
       <!-- display tweets here -->
       {% for tweet in tweets %}
+      
+      
+  <li>
       <img src="/Users/philipgingerich/FullStack/twitter-js/public/Fedora.jpeg" >
-      <h4>{{tweet.name}}</h4>
-        <li>
-          
-          {{tweet.content}}</li>
+      <a href="/users/{{tweet.name}}">{{tweet.name}}</a>
+       - {{tweet.content}}
+    </li>
+
       {% endfor %}
       
     </div>

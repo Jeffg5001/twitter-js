@@ -60,7 +60,7 @@ code {
 
 li {
     height : 140px;
-    style-type: none;
+    list-style-type: none;
     font-size: 20px;
     color : rgb(68, 117, 163);
 }
