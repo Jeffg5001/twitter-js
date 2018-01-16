@@ -21,10 +21,17 @@ app.get('/', (req,res) => {
     res.send('Welcome to our website!');
 })
 
+const nunjucks = require('nunjucks');
 
-
-//
-//
-//// these are comments
-//
-//
+var locals = {
+    title: 'An Example',
+    people: [
+        { name: 'Gandalf'},
+        { name: 'Frodo' },
+        { name: 'Hermione'}
+    ]
+};
+nunjucks.configure('views', {noCache: true});
+nunjucks.render('index.html', locals, function (err, output) {
+    console.log(output);
+});
