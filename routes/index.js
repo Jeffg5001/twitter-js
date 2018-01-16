@@ -21,8 +21,7 @@ router.get('/users/:name',(req,res) =>{
 
 router.get('/tweet/:id', (req,res) => {
   let uniqueTweet = _.filter(tweetBank.list(),function(tweet){
-    console.log(tweet.id)
-    return req.params.id === tweet.id;
+    return req.params.id == tweet.id;
   })
   res.render('index',{tweets:uniqueTweet})
 })
